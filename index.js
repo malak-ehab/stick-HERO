@@ -224,7 +224,7 @@ function animate(timestamp) {
 
           if (perfectHit) {
             perfectElement.style.opacity = 1;
-            setTimeout(() => (perfectElement.style.opacity = 0), 1000);
+            setTimeout(() => (perfectElement.style.display='none'), 1000);
           }
 
           generatePlatform();
