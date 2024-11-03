@@ -174,13 +174,7 @@ window.addEventListener("mouseup", function (event) {
 window.addEventListener("touchstart", function (event) {
   if (phase == "waiting") {
     lastTimestamp = undefined;
-   document.addEventListener('DOMContentLoaded', (event) => {
-    const element = document.querySelector('#introduction');
-    element.style.userSelect = 'none';
-    element.style.webkitUserSelect = 'none'; /* Safari */
-    element.style.mozUserSelect = 'none';    /* Firefox */
-    element.style.msUserSelect = 'none';     /* Internet Explorer/Edge */
-});
+   introductionElement.style.display='none';
 
     phase = "stretching";
     window.requestAnimationFrame(animate);
