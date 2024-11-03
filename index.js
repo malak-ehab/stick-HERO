@@ -223,7 +223,7 @@ function animate(timestamp) {
           scoreElement.innerText = score;
 
           if (perfectHit) {
-            perfectElement.style.opacity = 1;
+            perfectElement.style.display='block';
             setTimeout(() => (perfectElement.style.display='none'), 1000);
           }
 
