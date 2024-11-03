@@ -174,7 +174,14 @@ window.addEventListener("mouseup", function (event) {
 window.addEventListener("touchstart", function (event) {
   if (phase == "waiting") {
     lastTimestamp = undefined;
-   introductionElement.style.display='none';
+   document.addEventListener('DOMContentLoaded', (event) => {
+    const element = document.querySelector('#introduction');
+    element.style.userSelect = 'none';
+    element.style.webkitUserSelect = 'none'; /* Safari */
+    element.style.mozUserSelect = 'none';    /* Firefox */
+    element.style.msUserSelect = 'none';     /* Internet Explorer/Edge */
+});
+
     phase = "stretching";
     window.requestAnimationFrame(animate);
   }
